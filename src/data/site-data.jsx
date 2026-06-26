@@ -32,7 +32,7 @@ import { routes } from '../utils/navigation';
 export const homeHero = {
   image: softwareHouseHeroImage,
   eyebrow: 'Software House',
-  title: 'BRZ Solutions cria soluções digitais para operações que precisam evoluir.',
+  title: 'BRZ Solutions. Soluções digitais para operações que precisam evoluir.',
   description:
     'Desenvolvemos produtos próprios e sistemas sob medida para atendimento, automação, gestão clínica, bibliotecas digitais e performance operacional.',
 };
