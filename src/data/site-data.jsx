@@ -1,13 +1,16 @@
 import {
   BarChart3,
+  Bell,
   BookOpen,
   Bot,
   CalendarDays,
   CheckCircle2,
   Clock3,
   CloudCog,
+  EyeOff,
   Gauge,
   Globe2,
+  Inbox,
   Layers3,
   LineChart,
   Mail,
@@ -15,6 +18,7 @@ import {
   Mic2,
   PhoneCall,
   RadioTower,
+  ShieldCheck,
   Sparkles,
   Stethoscope,
   Target,
@@ -64,12 +68,12 @@ export const solutions = [
     route: routes.brzOne,
     name: 'BrzOne',
     eyebrow: 'Multiatendimento',
-    title: 'Atendimento unificado por Email, Chat, Telegram e WhatsApp.',
+    title: 'WhatsApp, Webchat e e-mail em um só sistema de atendimento.',
     description:
-      'Centralize conversas, distribua filas e acompanhe produtividade sem espalhar sua equipe em várias telas.',
+      'Responda o WhatsApp e o chat do seu site na mesma tela, com e-mail e contatos integrados.',
     icon: MessageCircle,
     theme: 'coral',
-    bullets: ['Filas de atendimento', 'Canais integrados', 'Histórico do cliente'],
+    bullets: ['WhatsApp e Webchat juntos', 'E-mail integrado', 'Contatos unificados'],
   },
   {
     route: routes.brzClinic,
@@ -119,33 +123,141 @@ export const productPages = {
   [routes.brzOne]: {
     name: 'BrzOne',
     eyebrow: 'Ferramenta multiatendimento',
-    title: 'Todos os canais de atendimento conectados em uma única operação.',
+    title: 'WhatsApp, o chat do seu site e o e-mail no mesmo lugar.',
     description:
-      'O BrzOne reúne Email, Chat, Telegram e WhatsApp para melhorar tempo de resposta, histórico de atendimento e gestão da equipe.',
+      'No BrzOne, as conversas de WhatsApp e Webchat chegam em uma única tela, em tempo real. E-mail, contatos e notificações fazem parte do mesmo sistema.',
     icon: MessageCircle,
     theme: 'coral',
     image: brzOneHeroImage,
     features: [
       {
-        title: 'Canais integrados',
+        title: 'Conversas em uma só tela',
         description:
-          'Unifique mensagens de diferentes canais sem perder contexto do cliente.',
+          'Atenda todas as caixas de WhatsApp e Webchat juntas, com busca, filtro por caixa, favoritas e arquivadas.',
+        icon: Inbox,
+      },
+      {
+        title: 'WhatsApp',
+        description:
+          'Conecte um ou mais números por QR code e troque textos, arquivos e áudios direto pelo navegador.',
         icon: MessageCircle,
       },
       {
-        title: 'Email e chat operacional',
+        title: 'Webchat no seu site',
         description:
-          'Organize conversas, acompanhe filas e distribua demandas por equipe.',
+          'Instale o balão de atendimento com uma linha de código e personalize título, cor e boas-vindas.',
+        icon: Globe2,
+      },
+      {
+        title: 'E-mail integrado',
+        description:
+          'Cadastre caixas IMAP ou POP3, leia, responda e escreva e-mails, com aviso de novas mensagens.',
         icon: Mail,
       },
       {
-        title: 'Gestão de atendimento',
+        title: 'Contatos unificados',
         description:
-          'Veja produtividade, histórico e status das conversas em tempo real.',
-        icon: BarChart3,
+          'Um cadastro para os canais, alimentado pelas conversas e pela agenda do WhatsApp.',
+        icon: Users,
+      },
+      {
+        title: 'Notificações em tempo real',
+        description:
+          'Som, aviso do sistema operacional e contadores para nenhuma mensagem passar despercebida.',
+        icon: Bell,
       },
     ],
-    metrics: ['Email', 'Chat', 'Telegram', 'WhatsApp'],
+    details: {
+      eyebrow: 'Em detalhes',
+      title: 'O que o BrzOne faz hoje.',
+      groups: [
+        {
+          title: 'Conversas',
+          icon: Inbox,
+          items: [
+            'Abas de não lidas, favoritas, todas e arquivadas',
+            'Busca por nome, número ou mensagem',
+            'Filtro por caixa, com o nome da caixa em cada conversa',
+            'Indicador de “digitando” e status de envio e leitura',
+          ],
+        },
+        {
+          title: 'WhatsApp',
+          icon: MessageCircle,
+          items: [
+            'Conexão via Evolution Go, com pareamento por QR code',
+            'Vários números, cada um em sua própria caixa',
+            'Importação do histórico recente ao parear o número',
+            'Fotos, documentos e áudios gravados na própria tela (anexos de até 16 MB)',
+            'Respostas com citação, reações e fotos de perfil',
+          ],
+        },
+        {
+          title: 'Webchat',
+          icon: Globe2,
+          items: [
+            'Instalação com um único script, sem depender de serviço externo',
+            'Visitante informa nome, telefone e e-mail e vira contato',
+            'Lista de sites autorizados em cada caixa',
+            'Título, cor, mensagem de boas-vindas e posição do balão',
+            'Conversa por texto, com “digitando” e confirmação de leitura',
+          ],
+        },
+        {
+          title: 'E-mail',
+          icon: Mail,
+          items: [
+            'Várias caixas por IMAP ou POP3, com teste de conexão',
+            'Leitura das mensagens recentes, resposta e novo e-mail',
+            'Aviso imediato via IMAP IDLE (em POP3, verificação a cada minuto)',
+            'Conteúdo HTML exibido em área isolada',
+            'Gmail compatível por senha de app',
+          ],
+        },
+        {
+          title: 'Contatos',
+          icon: Users,
+          items: [
+            'Nome, telefone, e-mail, documento e endereço',
+            'Cadastro automático a partir do WhatsApp e do Webchat',
+            'Importação da agenda do WhatsApp conectado',
+            'Envio por WhatsApp ou e-mail direto do contato',
+          ],
+        },
+        {
+          title: 'Notificações',
+          icon: Bell,
+          items: [
+            'Som e notificação do sistema com a aba fora de foco',
+            'Foto ou iniciais do contato no aviso de conversa',
+            'Menus separados para conversas e e-mails',
+            'Total de não lidas no título da aba',
+          ],
+        },
+        {
+          title: 'Privacidade e aparência',
+          icon: EyeOff,
+          items: [
+            'Modo privado que desfoca nomes, fotos e mensagens das conversas',
+            'Tema claro ou escuro',
+            'Tamanho da fonte de 70% a 130%',
+            'Menu lateral recolhível',
+          ],
+        },
+        {
+          title: 'Segurança e implantação',
+          icon: ShieldCheck,
+          items: [
+            'Conta de usuário com ativação por e-mail',
+            'Senhas de e-mail e tokens de WhatsApp criptografados (AES-256-GCM)',
+            'Webchat com acesso restrito por site e limite de requisições',
+            'Implantação com Docker Compose: banco, API e interface',
+          ],
+        },
+      ],
+      note: 'Próximos canais no planejamento: Telegram e Instagram.',
+    },
+    metrics: ['WhatsApp', 'Webchat', 'E-mail', 'Tempo real'],
   },
   [routes.brzClinic]: {
     name: 'BrzClinic',

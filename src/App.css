@@ -729,6 +729,59 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.detail-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 28px;
+  background: #ffffff;
+}
+
+.detail-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: 1.2rem;
+}
+
+.detail-card ul {
+  display: grid;
+  gap: 11px;
+  padding: 0;
+  margin: 0;
+  color: var(--muted);
+  list-style: none;
+}
+
+.detail-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.detail-card svg {
+  flex: 0 0 auto;
+  color: var(--page-accent, var(--primary-dark));
+}
+
+.detail-card li svg {
+  margin-top: 3px;
+}
+
+.details-note {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-weight: 760;
+  text-align: center;
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: 0.9fr 1fr;
@@ -876,7 +929,8 @@
   .metrics-grid,
   .features-grid,
   .solutions-grid,
-  .product-features {
+  .product-features,
+  .details-grid {
     grid-template-columns: 1fr;
   }
 

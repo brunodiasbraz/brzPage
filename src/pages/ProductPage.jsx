@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import ContactSection from '../components/ContactSection';
+import DetailList from '../components/DetailList';
 import FeatureCard from '../components/FeatureCard';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -63,6 +64,8 @@ function ProductPage({ product }) {
           ))}
         </div>
       </section>
+
+      {product.details && <DetailList details={product.details} />}
 
       <ContactSection context={`o uso do ${product.name}`} />
       <Footer />
